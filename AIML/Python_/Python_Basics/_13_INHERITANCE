@@ -1,0 +1,9 @@
+class Employee:
+    s_time = "10am"
+
+class Teacher(Employee):
+    def __init__(self, sub):
+        self.sub = sub
+
+t1 = Teacher("Math")
+print(t1.sub, t1.s_time)
