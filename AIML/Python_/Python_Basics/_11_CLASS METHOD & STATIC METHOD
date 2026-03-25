@@ -1,0 +1,18 @@
+class Laptop:
+    storage_type = "SSD"
+
+    def __init__(self, RAM, Storage):
+        self.RAM = RAM
+        self.Storage = Storage
+
+    @classmethod
+    def getStorage(cls):                   # class method
+        print(cls.storage_type)
+
+    @staticmethod
+    def calc_discount(price, discount):    # static method
+        print(price - (price * discount / 100))
+
+lap = Laptop("16GB", "512GB")
+lap.getStorage()
+lap.calc_discount(1000, 10)
