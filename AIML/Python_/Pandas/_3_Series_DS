@@ -15,3 +15,4 @@ t=pd.Series([1,5,3,7,8], index=["Adam","Eve","James","Marco","Jake"])
 print(t["Eve"])  #indexed value
 print(t)          #table
 t                 #tablized format
+print(t.index)    #print index
