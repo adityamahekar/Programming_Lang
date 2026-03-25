@@ -1,0 +1,9 @@
+import json
+
+pyy_obj = {
+    "name": "Shradha",
+    "isTeacher": True,
+}
+
+with open("data.json", "w") as f:
+    json.dump(pyy_obj, f, indent=4, sort_keys=True)   # write JSON
