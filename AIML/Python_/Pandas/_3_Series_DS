@@ -1,0 +1,17 @@
+
+import pandas as pd
+
+s = pd.Series([1,2,5,4,6])
+
+print(s[0])    #indexed value
+print(s)       #table
+s                 #tablized format
+
+----------------------------------------------
+# label => named index
+
+t=pd.Series([1,5,3,7,8], index=["Adam","Eve","James","Marco","Jake"])
+
+print(t["Eve"])  #indexed value
+print(t)          #table
+t                 #tablized format
