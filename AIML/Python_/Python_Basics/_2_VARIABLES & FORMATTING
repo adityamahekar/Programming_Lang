@@ -1,0 +1,8 @@
+a = 25                                     # integer
+b = 10                                     # integer
+
+sum = a + b                                # addition
+sub = a - b                                # subtraction
+
+print("sum: {}".format(sum))               # format()
+print(f"sum of {a} and {b} is {a+b}")      # f-string
