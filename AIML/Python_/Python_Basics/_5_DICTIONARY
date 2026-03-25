@@ -1,0 +1,9 @@
+d = {"name": "aditya", "age": 19}          # dictionary
+
+d["age"] = 21                              # update
+d.update({"city": "delhi"})                # add
+
+print(d.keys())                            # keys
+print(d.values())                          # values
+print(d.items())                           # key-value
+print(d.get("city"))                       # safe access
