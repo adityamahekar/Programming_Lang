@@ -1,0 +1,6 @@
+tup = (1, 4, 6, 2, 6, 5, "aaa")            # tuple
+
+print(tup[2])                              # access
+print(tup[:3])                             # slicing
+print(tup.index(6))                        # index
+print(tup.count(4))                        # count
