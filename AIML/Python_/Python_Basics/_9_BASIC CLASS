@@ -1,0 +1,6 @@
+class Student:
+    subject = "Python"                     # class variable
+    college = "apna college"
+
+stu1 = Student()
+print(stu1.subject)
