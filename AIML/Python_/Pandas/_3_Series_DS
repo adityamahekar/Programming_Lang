@@ -1,6 +1,14 @@
+Pandas Series(Properties):
+
+1. Homogenous
+2. Vectorized Operations
+3. Handle Missing values with NaN
+4. Mutable values, Immutable size
+
+///////////////////////////////////////////////////
 
 import pandas as pd
-
+-----------------------------------------
 s = pd.Series([1,2,5,4,6])
 
 print(s[0])    #indexed value
@@ -9,10 +17,11 @@ s                 #tablized format
 
 ----------------------------------------------
 # label => named index
-
+----------------------------------------------
 t=pd.Series([1,5,3,7,8], index=["Adam","Eve","James","Marco","Jake"])
 
 print(t["Eve"])  #indexed value
 print(t)          #table
 t                 #tablized format
 print(t.index)    #print index
+print(t.drop("Marco"))      #delete row
