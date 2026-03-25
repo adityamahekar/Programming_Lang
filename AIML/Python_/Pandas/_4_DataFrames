@@ -1,0 +1,30 @@
+
+import pandas as pd
+
+info ={
+    "Name" :["Adam","Eve","Bob'"],
+    "Age": [23,24,25],
+    "GPA" : [9.5,8.6,7.2]
+}
+
+df = pd.DataFrame(info)   #DataFrame => Obj -> Table
+
+print(df)     #table
+df           #table format
+
+print(df.index) # Loop Range: RangeIndex(start=0, stop=3, step=1)
+print(df.columns) #colums: Index(['Name', 'Age', 'GPA'], dtype='object')
+
+#------------------------------------
+
+df = pd.DataFrame([["Adam",23],["Aru",44],["Arnab",38]],columns=["Name","Age"])
+print(df)
+
+#////////////////////////////////////////
+import pandas as pd
+import numpy as np
+
+np_arr = np.array([[1,2,4],[4,6,3]])    #np array create
+
+df = pd.DataFrame(np_arr,columns=["A","B","C"])   #assign column name
+print(df)
