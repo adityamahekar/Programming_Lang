@@ -1,0 +1,4 @@
+words = ["hello", "python", "college"]
+
+upper_words = [i.upper() for i in words]  # convert to uppercase
+print(upper_words)
