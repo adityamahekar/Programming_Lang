@@ -1,0 +1,13 @@
+marks = [99, 89, 100, 65, 10, 92]          # list
+
+marks[3] = 77                              # update
+marks.append(90)                           # append
+marks.insert(1, 100)                       # insert
+marks.reverse()                            # reverse
+
+for i in marks:                            # traversal
+    print(i)
+
+for i in range(len(marks)):                # search index
+    if marks[i] == 10:
+        print(i)
