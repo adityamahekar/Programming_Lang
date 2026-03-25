@@ -1,0 +1,14 @@
+import pandas as pd
+
+df = pd.read_csv("emplyeeData.csv")   # read .csv file
+print(df)
+
+
+df = pd.read_json("emplyeeData.json")   # read .json file
+print(df)
+
+df = pd.read_excel("emplyeeData.xlsx")   # read .xlsx file
+print(df)
+
+df = pd.read_sql("emplyeeData.sql")   # read .sql file
+print(df)
