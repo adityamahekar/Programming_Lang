@@ -1,0 +1,11 @@
+try:
+    x = int(input("Enter x: "))
+    ans = 10 / x
+except ZeroDivisionError:
+    print("Divide by zero error")
+except ValueError:
+    print("Invalid input")
+else:
+    print(ans)
+finally:
+    print("Execution done")
