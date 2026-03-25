@@ -1,0 +1,12 @@
+word = "python uu njjki i "                 # string
+word2 = "I Love"                           # string
+
+print(word2 + " " + word)                  # concatenation
+
+for ch in word:                            # loop characters
+    print(ch)
+
+for i in range(len(word)):                 # loop with index
+    print(i, word[i])
+
+print(word[-6:-2])                         # slicing
