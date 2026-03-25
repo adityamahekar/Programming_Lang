@@ -1,0 +1,11 @@
+class Student:
+    def __init__(self, name, cgpa):        # constructor
+        self.name = name
+        self.cgpa = cgpa
+
+    def get_cgpa(self):
+        return self.cgpa
+
+stu1 = Student("aditya", 9)
+print(stu1.name, stu1.cgpa)
+print(stu1.get_cgpa())
