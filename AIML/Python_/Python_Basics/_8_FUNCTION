@@ -1,0 +1,2 @@
+def add(a, b):                             # function
+    return a + b
