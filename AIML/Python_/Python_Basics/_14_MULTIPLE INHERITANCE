@@ -1,0 +1,16 @@
+class Teacher:
+    def __init__(self, salary):
+        self.salary = salary
+
+class Student:
+    def __init__(self, fees):
+        self.fees = fees
+
+class TA(Teacher, Student):
+    def __init__(self, salary, fees, amount):
+        Teacher.__init__(self, salary)
+        Student.__init__(self, fees)
+        self.amount = amount
+
+ta = TA(50000, 100000, 15000)
+print(ta.salary, ta.fees, ta.amount)
