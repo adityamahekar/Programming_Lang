@@ -1,0 +1,4 @@
+sqr = [1, -5, 6, -9, -4, 7]
+
+sqr = [0 if i < 0 else i for i in sqr]    # replace negatives
+print(sqr)
