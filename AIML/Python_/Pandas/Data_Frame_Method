@@ -1,0 +1,27 @@
+import pandas as pd
+
+df = pd.read_csv("emplyeeData.csv")   # read .csv file
+print(df)
+
+df.head()  # first 5 rows
+df.head(10)  # first 10 rows
+
+df.tail()  # last 5 rows
+df.tail(10) # last 10 rows
+
+df.sample()  #randow 5 rows
+df.sample(10)  #randow 10 rows
+
+df.info()  #info about data
+
+df.shape # number of rows and column
+
+df.describe()  #describe(only for numerical): count,mean,std,min,25%,50%,75%,max
+
+df.columns   #columns
+
+df.nunique()  #number of unqiue values [no duplicates]
+
+
+
+
