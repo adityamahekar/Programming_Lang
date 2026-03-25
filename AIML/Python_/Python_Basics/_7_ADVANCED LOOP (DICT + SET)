@@ -1,0 +1,15 @@
+info = [
+    ("Alice", "dd"),
+    ("Altte", "dd"),
+    ("Alvice", "ood"),
+    ("Albbice", "iu"),
+]
+
+data = {}
+
+for name, course in info:
+    if name not in data:
+        data[name] = set()                 # create set
+    data[name].add(course)                 # avoid duplicates
+
+print(data)
