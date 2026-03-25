@@ -1,1 +1,11 @@
- pip install pandas
+# EDA (Exploratory Data Analysis)
+
+# >> Load and understand Structure
+# >> clean data 
+# >> Statistical Summary
+# >> Visualization
+
+```
+pip install pandas        //Install
+
+```
