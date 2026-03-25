@@ -1,0 +1,91 @@
+# ==================== BASIC FILE OPEN ====================
+f = open("data.txt", "r")                  # open file in read mode
+data = f.read()                           # read full content
+print(data)
+f.close()                                 # close file
+
+
+# ==================== WRITE MODE (w) ====================
+f = open("data.txt", "w")                  # write mode (overwrite)
+f.write("Hello Python")                   # write data
+f.close()                                 # close file
+
+
+# ==================== APPEND MODE (a) ====================
+f = open("data.txt", "a")                  # append mode
+f.write("\nNew Line Added")               # adds at end
+f.close()
+
+
+# ==================== READ MODE (r) ====================
+f = open("data.txt", "r")                  # read mode
+print(f.read())                           # read entire file
+f.close()
+
+
+# ==================== CREATE MODE (x) ====================
+# f = open("newfile.txt", "x")             # create new file (error if exists)
+# f.write("Created file")
+# f.close()
+
+
+# ==================== READ + WRITE (r+) ====================
+f = open("data.txt", "r+")                 # read + write
+print(f.read())                           # read first
+f.write("\nAdded using r+")               # write after reading
+f.close()
+
+
+# ==================== WRITE + READ (w+) ====================
+f = open("data.txt", "w+")                 # overwrite + read/write
+f.write("Fresh Data")                     # overwrite file
+f.seek(0)                                 # move cursor to start
+print(f.read())                           # read content
+f.close()
+
+
+# ==================== APPEND + READ (a+) ====================
+f = open("data.txt", "a+")                 # append + read
+f.write("\nAppended Data")                # append
+f.seek(0)                                 # move to start
+print(f.read())                           # read all
+f.close()
+
+
+# ==================== WITH STATEMENT (BEST PRACTICE) ====================
+with open("data.txt", "r") as f:           # auto close
+    print(f.read())
+
+
+# ==================== READ LINE BY LINE ====================
+with open("data.txt", "r") as f:
+    print(f.readline())                   # read one line
+    print(f.readlines())                  # read all lines as list
+
+
+# ==================== WRITE MULTIPLE LINES ====================
+lines = ["Line1\n", "Line2\n", "Line3\n"]
+
+with open("data.txt", "w") as f:
+    f.writelines(lines)                   # write list
+
+
+# ==================== FILE POINTER ====================
+with open("data.txt", "r") as f:
+    print(f.tell())                       # current position
+    f.read(5)                             # read 5 chars
+    print(f.tell())                       # updated position
+    f.seek(0)                             # move pointer to start
+
+
+# ==================== CHECK FILE EXISTS ====================
+import os
+
+if os.path.exists("data.txt"):            # check existence
+    print("File exists")
+else:
+    print("File not found")
+
+
+# ==================== DELETE FILE ====================
+# os.remove("data.txt")                   # delete file
