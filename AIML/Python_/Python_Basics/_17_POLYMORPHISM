@@ -1,0 +1,10 @@
+class Teacher:
+    def get_des(self):
+        print("Teacher")
+
+class Accountant:
+    def get_des(self):
+        print("Accountant")
+
+Teacher().get_des()
+Accountant().get_des()
