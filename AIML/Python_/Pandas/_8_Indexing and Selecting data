@@ -1,0 +1,32 @@
+import pandas as pd
+
+df = pd.read_csv("Downloads/codeWithHarry/pythonLec/globalAirQuality.csv")
+
+
+#selecting data
+
+df["city"]                  #Select 1 column
+df[["city","aqi"]]          #Select 2 column
+
+
+df.loc[0]                  # Select rows                           [Labeled Based]
+df.loc[0:2]                # Select 0 to 2 rows [start : end]
+
+
+df.iloc[0]                  # Select rows                           [Indexed Based]
+df.iloc[0:2]                # Select 0 to 1 rows [start : end-1]
+df.iloc[0:3,1:5]            # Select 0 to 3 rows [start : end-1] and column from 1 to 5
+
+df.loc[0,"aqi"]              # row:0   column:"aqi"  =>   output: np.int64(108)
+df.loc[0,["city","aqi"]]     # row:0   column:"aqi" and "city"
+
+
+df.columns               #columns 
+
+
+df.at[0,"city"]          # select cell column lsbel title => output: 'New York'  
+df.iat[0,2]              # select cell column index => output: 'New York'
+
+
+df["city"].copy()         # copy the dataset and void changes in the dataset made by the user
+
