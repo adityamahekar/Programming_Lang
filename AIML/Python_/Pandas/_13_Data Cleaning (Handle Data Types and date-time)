@@ -1,0 +1,13 @@
+import pandas as pd
+
+df = pd.read_csv("Downloads/codeWithHarry/pythonLec/raw_data.csv")
+
+#-----------------Data Cleaning (Handle Data Types and date-time)----------------------------------------
+
+df.dtypes      # get all column data types
+
+df["age"].astype("int64")          #  change age column data types from float64 -> int64
+
+date_str = pd.Series([pd.to_datetime("2026-12-31")])         # Store time in time stamp
+type(date_str.dtypes)                       # output: numpy.dtypes.DateTime64DType
+
