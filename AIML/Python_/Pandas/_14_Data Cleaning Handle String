@@ -1,0 +1,18 @@
+import pandas as pd
+
+df = pd.read_csv("Downloads/codeWithHarry/pythonLec/raw_data.csv")
+
+#-----------------Data Cleaning (Handle String)----------------------------------------
+
+df["gender"].str.lower()          # gender column values to lower case
+
+df["gender"].str.upper()               # gender column values to Upper case
+
+df["gender"].str.capitalize()            # first letter capital
+
+df["name"].str.split("")                # divide first name and last name => [John, Doe]
+
+df["country"].str.contains("USA")                       # give True -> if contains      False -> if doesnt contains
+df["country"].str.contains("USA", case=False)           # (No case Sensitive) give True -> if contains      False -> if doesnt contains
+
+
