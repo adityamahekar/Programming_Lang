@@ -5,4 +5,4 @@
 
     FSD Home Component P4  complete
 
-    AIML Python Fundamentals(part_6).zip => 07. DataFrame Methods complete
+    AIML Python Fundamentals(part_7).zip complete
