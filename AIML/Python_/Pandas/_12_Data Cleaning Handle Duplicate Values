@@ -1,1 +1,16 @@
+import pandas as pd
 
+df = pd.read_csv("Downloads/codeWithHarry/pythonLec/raw_data.csv")
+
+#-----------------Data Cleaning Duplicates----------------------------------------
+
+
+df.duplicated()             # merge duplicates
+
+df["country"].duplicated()    # true -> non duplicate value    false -> repeat value
+
+df[["country","gender"]].duplicated()    # if both have similar values => true -> non duplicate value    false -> repeat value
+
+df.drop_duplicates()         # delete the row even the index
+
+df.drop_duplicates(inplace=True)         # delete the row in the original table
