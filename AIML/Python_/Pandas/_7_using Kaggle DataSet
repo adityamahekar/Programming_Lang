@@ -3,3 +3,8 @@ kaggle link: https://www.kaggle.com/
 
 -----------------------------------------
 
+import pandas as pd
+
+df = pd.read_csv("Downloads/codeWithHarry/pythonLec/globalAirQuality.csv")          #download and import kaggles data
+df
+
