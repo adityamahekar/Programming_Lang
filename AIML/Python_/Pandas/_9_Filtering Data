@@ -1,0 +1,18 @@
+import pandas as pd
+
+df = pd.read_csv("Downloads/codeWithHarry/pythonLec/globalAirQuality.csv")
+
+#filtering of Data
+
+df[df["aqi"] > 100]        #aqi > 100
+
+df[(df["aqi"] > 100) & (df["temperature"] > 30)]       #aqi > 100  AND temperature > 30
+
+df[(df["aqi"] > 100) | (df["temperature"] > 30)]       #aqi > 100 OR temperature > 30
+
+df[~(df["aqi"] > 100)]        #aqi > 100 NOT
+
+
+aqi_data = df[(df["aqi"] > 100) & (df["temperature"] > 30)][["city", "aqi"]]  # filter rows, keep city & aqi
+aqi_data                                                                        # display DataFrame
+aqi_data.iloc[0]              
