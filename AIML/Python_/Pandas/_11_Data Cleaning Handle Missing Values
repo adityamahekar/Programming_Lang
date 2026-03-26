@@ -1,0 +1,29 @@
+# Cleaning Data / Handle Misiing Values
+
+import pandas as pd
+
+df = pd.read_csv("Downloads/codeWithHarry/pythonLec/raw_data.csv")
+
+#-----------------Data Cleaning----------------------------------------
+
+df.isnull()        # if empty replace with not a number(NaN) : " " -> NaN
+df.isna()         #(Alias of isnull()) if empty replace with not a number(NaN) : " " -> NaN
+
+df.isnull.sum()     # count number of missing value in each column
+
+df.dropna()             #if missing then delete  rows
+df.dropna(axis=1)       #if missing then delete  columns
+
+df.fillna(-1)           #replace: " " -> -1
+
+df["age"].fillna(-1)           #replace: " " -> -1  only for age column
+
+age_mean = df["age"].mean()            #get age mean
+df["age"].fillna(age_mean)             # fill null value of age column to mean value
+
+
+df["age"].ffill()             # if there is missing value then copy the prev value to the missing value
+
+
+df["age"].bfill()             # if there is missing value then copy the next value to the missing value
+
