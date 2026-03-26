@@ -1,0 +1,18 @@
+import pandas as pd
+
+df = pd.read_csv("Downloads/codeWithHarry/pythonLec/globalAirQuality.csv")
+
+#-----------------Query----------------------------------------
+
+df.query("aqi > 100")                           #aqi > 100
+
+df.query("aqi > 100 & temperature > 30")        #aqi > 100 and temperature > 30
+
+df.query("aqi > 100 & temperature > 30")[["city","aqi"]        #aqi > 100 and temperature > 30  column: aqi and city
+
+
+aqi_val = 100
+df.query("aqi > @aqi_val & temperature > 30")[["city","aqi"]        # aqi > 100[selected from variable usinf '@'] and temperature > 30  column: aqi and city
+
+
+    
