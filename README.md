@@ -3,6 +3,7 @@
 
     GFG 205 complete
 
-    FSD Home Component P4  complete
+    FSD NavBar, Footer & OpenAccount  complete
 
     AIML Python Fundamentals(part_7).zip complete
+
