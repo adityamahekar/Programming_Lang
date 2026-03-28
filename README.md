@@ -7,3 +7,10 @@
 
     AIML Python Fundamentals(part_7).zip complete
 
+---
+
+react
+
+bootstrap
+
+npm i react-router-dom
