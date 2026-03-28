@@ -3,7 +3,7 @@
 
     GFG 205 complete
 
-    FSD NavBar, Footer & OpenAccount  complete
+    FSD Setting up React Router  complete
 
     AIML Python Fundamentals(part_7).zip complete
 
