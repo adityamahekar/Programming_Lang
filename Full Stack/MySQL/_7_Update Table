@@ -1,0 +1,15 @@
+
+-- UPDATE table_name
+-- SET col1 = val1, col2 = val2
+-- WHERE condition;
+
+
+SET SQL_SAFE_UPDATES = 0;         -- while new start in mySQL we cant update the database to do update we on the sql safe updates
+
+UPDATE user
+SET followers = 600      -- set followers to 600
+WHERE age = 16;          -- if age == 16
+
+SELECT * FROM user;
+
+
