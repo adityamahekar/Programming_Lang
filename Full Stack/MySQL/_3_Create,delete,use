@@ -1,0 +1,8 @@
+CREATE DATABASE college;         -- create database Captial or small both styles can be used 
+create database xyz_company;
+
+DROP DATABASE xyz_company;      -- delete database Captial or small both styles can be used 
+drop database xyz_company;
+
+USE college;    -- use the data bases 
+use college; 
