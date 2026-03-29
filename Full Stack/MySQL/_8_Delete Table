@@ -1,0 +1,6 @@
+-- DELETE FROM table_name
+-- WHERE condition;
+
+
+DELETE FROM user     -- Delete users where age above 30
+WHERE age > 30;
