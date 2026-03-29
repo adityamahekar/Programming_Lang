@@ -1,0 +1,27 @@
+
+CREATE TABLE user (
+	id INT,
+    age INT,
+    name VARCHAR(30) NOT NULL,    -- cant keep empty
+    email VARCHAR(50) UNIQUE,     -- cant add duplicate value
+    followers INT DEFAULT 0,      -- if nothing is add then 0
+	CONSTRAINT CHECK (age >= 13),  -- age >= 13 only then add
+    PRIMARY KEY (id)               -- unquie value cant be similar
+);
+
+
+-- INSERT INTO table_name
+-- (col_name1, col_name2) VALUES (col1__v1,col2_v2),
+-- 								 (col1_v2,col2_v2);
+                                  
+INSERT INTO user
+(id, name, age, email, followers) VALUES
+(101, "Rahul",16,  "rahul@gmail.com", 1500),
+(102, "Priya", 28, "priya@gmail.com", 3200),
+(103, "Alok", 29, "alok@gmail.com", 870),
+(104, "Jai", 33, "jai@gmail.com",DEFAULT),
+(105, "Sneha", 22, "sneha@gmail.com", 650);
+                                   
+	
+    SELECT * FROM user;
+
