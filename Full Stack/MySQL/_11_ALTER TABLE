@@ -1,15 +1,18 @@
-v-- ALTER TABLE - to change the schema
+-- ALTER TABLE - to change the schema
 -- ┌─────────────┬─────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────┐
 -- │  Operation  │                      Syntax                             │                     Example                            │
 -- ├─────────────┼─────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┤
 -- │ ADD         │ ALTER TABLE table_name                                  │ ALTER TABLE userss                                     │
--- │             │ ADD col_name datatype;                                  │ ADD  phone VARCHAR(15);                                │
+-- │             │ ADD    col_name datatype;                               │ ADD    phone VARCHAR(15);                              │
 -- ├─────────────┼─────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┤
 -- │ DROP        │ ALTER TABLE table_name                                  │ ALTER TABLE userss                                     │
--- │             │ DROP COLUMN col_name;                                   │ DROP COLUMN phone;                                     │
+-- │             │ DROP   COLUMN col_name;                                 │ DROP   COLUMN phone;                                   │
 -- ├─────────────┼─────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┤
 -- │ RENAME      │ ALTER TABLE table_name                                  │ ALTER TABLE userss                                     │
--- │             │ RENAME COLUMN old TO new;                               │ RENAME COLUMN name TO full_name;                       │
+-- │ COLUMN      │ RENAME COLUMN old TO new;                               │ RENAME COLUMN name TO full_name;                       │
+-- ├─────────────┼─────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┤
+-- │ RENAME      │ ALTER TABLE old_table_name                              │ ALTER TABLE userss                                     │
+-- │ TABLE       │ RENAME TO new_table_name;                               │ RENAME TO users;                                       │
 -- ├─────────────┼─────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┤
 -- │ MODIFY      │ ALTER TABLE table_name                                  │ ALTER TABLE userss                                     │
 -- │             │ MODIFY COLUMN col_name datatype;                        │ MODIFY COLUMN age TINYINT UNSIGNED;                    │
