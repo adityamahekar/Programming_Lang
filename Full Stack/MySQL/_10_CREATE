@@ -1,0 +1,76 @@
+
+-- ====================================
+-- DATABASE
+-- ====================================
+-- CREATE DATABASE college;                        -- create database
+-- CREATE DATABASE IF NOT EXISTS Instagram;        -- create only if not exists
+-- DROP DATABASE IF EXISTS Instagram;              -- delete database
+-- USE Instagram;                                  -- select database
+
+-- ====================================
+-- CREATE TABLE
+-- ====================================
+CREATE TABLE userss (
+    id         INT PRIMARY KEY,          -- unique, cant be similar
+    age        INT UNSIGNED,             -- only positive numbers
+    name       VARCHAR(30) NOT NULL,     -- cant keep empty
+    email      VARCHAR(50) UNIQUE,       -- cant add duplicate value
+    followers  INT UNSIGNED DEFAULT 0,   -- if nothing added then 0
+    CONSTRAINT CHECK (age >= 13)         -- age >= 13 only then add
+);
+
+-- ====================================
+-- SELECT all data
+-- ====================================
+SELECT * FROM userss;                    -- fetch all rows from userss
+
+
+////////////////////////////////////////////////////////////////////////////////////
+
+-- ====================================
+-- Data Types Reference:
+-- ┌─────────────────┬───────────────────────────────────┐
+-- │   Data Type     │         Description               │
+-- ├─────────────────┼───────────────────────────────────┤
+-- │ INT             │ whole numbers (-2B to 2B)         │
+-- │ TINYINT         │ small numbers (-128 to 127)       │
+-- │ BIGINT          │ very large numbers                │
+-- │ FLOAT           │ decimal, less precise             │
+-- │ DOUBLE          │ decimal, more precise             │
+-- │ DECIMAL(p,s)    │ exact decimal (e.g. money)        │
+-- │ BOOL/BOOLEAN    │ 0 = false, 1 = true               │
+-- ├─────────────────┼───────────────────────────────────┤
+-- │ CHAR(n)         │ fixed length string (max 255)     │
+-- │ VARCHAR(n)      │ variable length (max 65,535)      │
+-- │ TEXT            │ long text (max 65,535 chars)      │
+-- │ LONGTEXT        │ very long text (max 4GB)          │
+-- │ ENUM            │ one value from a list             │
+-- ├─────────────────┼───────────────────────────────────┤
+-- │ DATE            │ YYYY-MM-DD                        │
+-- │ TIME            │ HH:MM:SS                          │
+-- │ DATETIME        │ YYYY-MM-DD HH:MM:SS               │
+-- │ TIMESTAMP       │ auto tracks date/time             │
+-- │ YEAR            │ YYYY                              │
+-- ├─────────────────┼───────────────────────────────────┤
+-- │ BLOB            │ binary data (max 65KB)            │
+-- │ LONGBLOB        │ large binary (max 4GB)            │
+-- │ JSON            │ stores JSON data                  │
+-- └─────────────────┴───────────────────────────────────┘
+
+-------------------------------------------------------------------------------------
+
+UNSIGNED means no negative numbers — only 0 and above, which doubles the positive range!
+sql-- Syntax
+column_name INT UNSIGNED
+
+Range comparison:
+sql
+-- ┌─────────────────┬──────────────────────────┬──────────────────────────┐
+-- │   Data Type     │        SIGNED (default)  │        UNSIGNED          │
+-- ├─────────────────┼──────────────────────────┼──────────────────────────┤
+-- │ TINYINT         │      -128 to 127         │       0 to 255           │
+-- │ SMALLINT        │   -32,768 to 32,767      │       0 to 65,535        │
+-- │ MEDIUMINT       │      -8M to 8M           │       0 to 16M           │
+-- │ INT             │       -2B to 2B          │       0 to 4B            │
+-- │ BIGINT          │  -9.2Q to 9.2Q           │       0 to 18.4Q         │
+-- └─────────────────┴──────────────────────────┴──────────────────────────┘
