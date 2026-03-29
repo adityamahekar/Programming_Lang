@@ -3,7 +3,7 @@
 
     GFG 205 complete
 
-    FSD Setting up React Router  complete
+    FSD Implement "About" Component  complete
 
     AIML Python Fundamentals(part_7).zip complete
 
