@@ -5,7 +5,7 @@
 
     FSD Implement "About" Component  complete
 
-    AIML Python Fundamentals(part_7).zip complete
+    AIML Python Fundamentals(part_7).zip => 19 complete
 
 ---
 
