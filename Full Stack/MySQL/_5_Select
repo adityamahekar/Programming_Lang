@@ -1,0 +1,9 @@
+
+-- SELECT col1,col2 FROM table_name;
+SELECT name,age FROM student;      -- get name and age column from students table
+
+-- SELECT * FROM table_name;
+SELECT * FROM student;            -- get all column from students table
+
+
+SELECT DISTINCT age FROM student;     -- only unquie
