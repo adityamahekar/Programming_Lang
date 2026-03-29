@@ -1,0 +1,5 @@
+-- TRUNCATE TABLE table_name;
+
+TRUNCATE TABLE user;      -- delete the table data but keep the table
+
+
