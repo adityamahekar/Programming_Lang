@@ -1,0 +1,17 @@
+-- CREATE TABLE table_name(
+-- 	column_name1 datatype constraint,
+-- 	column_name2 datatype constraint,
+-- 	column_name3 datatype constraint,
+-- );
+
+
+CREATE TABLE student(         -- Create DataBse      
+	roll_no INT,
+    name VARCHAR(30),
+    age int
+);
+
+INSERT INTO student VALUES(101,"adam",12),        -- Insert Data 
+						  (102,"bob",14);
+                          
+SELECT * FROM student;      -- Select data 
