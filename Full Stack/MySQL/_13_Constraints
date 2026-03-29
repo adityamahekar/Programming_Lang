@@ -1,0 +1,21 @@
+-- CONSTRAINTS - rules applied to columns
+-- ┌─────────────┬────────────────────────────────────────────────────┬────────────────────────────────────────────────────┐
+-- │  Constraint │                  Syntax                            │                 Example                            │
+-- ├─────────────┼────────────────────────────────────────────────────┼────────────────────────────────────────────────────┤
+-- │ NOT NULL    │ col_name datatype NOT NULL;                        │ name VARCHAR(30) NOT NULL;                         │
+-- ├─────────────┼────────────────────────────────────────────────────┼────────────────────────────────────────────────────┤
+-- │ UNIQUE      │ col_name datatype UNIQUE;                          │ email VARCHAR(50) UNIQUE;                          │
+-- ├─────────────┼────────────────────────────────────────────────────┼────────────────────────────────────────────────────┤
+-- │ DEFAULT     │ col_name datatype DEFAULT value;                   │ followers INT DEFAULT 0;                           │
+-- ├─────────────┼────────────────────────────────────────────────────┼────────────────────────────────────────────────────┤
+-- │ CHECK       │ CONSTRAINT CHECK (condition);                      │ CONSTRAINT CHECK (age >= 13);                      │
+-- ├─────────────┼────────────────────────────────────────────────────┼────────────────────────────────────────────────────┤
+-- │ NOT NULL    │ ALTER TABLE table_name                             │ ALTER TABLE userss                                 │
+-- │ ADD         │ MODIFY col_name datatype NOT NULL;                 │ MODIFY name VARCHAR(30) NOT NULL;                  │
+-- ├─────────────┼────────────────────────────────────────────────────┼────────────────────────────────────────────────────┤
+-- │ UNIQUE ADD  │ ALTER TABLE table_name ADD UNIQUE(col_name);       │ ALTER TABLE userss ADD UNIQUE(email);              │
+-- ├─────────────┼────────────────────────────────────────────────────┼────────────────────────────────────────────────────┤
+-- │ DEFAULT ADD │ ALTER TABLE table_name ALTER col_name SET DEFAULT; │ ALTER TABLE userss ALTER followers SET DEFAULT 0;  │
+-- ├─────────────┼────────────────────────────────────────────────────┼────────────────────────────────────────────────────┤
+-- │ CHECK ADD   │ ALTER TABLE table_name ADD CONSTRAINT CHECK(cond); │ ALTER TABLE userss ADD CONSTRAINT CHECK(age >= 13);│
+-- └─────────────┴────────────────────────────────────────────────────┴────────────────────────────────────────────────────┘
