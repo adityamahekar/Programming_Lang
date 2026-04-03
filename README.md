@@ -3,7 +3,7 @@
 
     GFG 205 complete
 
-    FSD RightSection in "Product" Component  complete
+    FSD Implement "Pricing" Component  complete
 
     AIML Python Fundamentals(part_7).zip => 19 complete
 
