@@ -1,7 +1,7 @@
 # Programming_Lang
 
 
-    GFG 205 complete
+    GFG 250 complete
 
     FSD Implement "Pricing" Component  complete
 
