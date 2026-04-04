@@ -3,7 +3,7 @@
 
     GFG 250 complete
 
-    FSD Implement "Pricing" Component  complete
+    FSD Support Component (part 2)  complete
 
     AIML Python Fundamentals(part_7).zip => 19 complete
 
