@@ -3,7 +3,7 @@
 
     GFG 250 complete
 
-    FSD Support Component (part 2)  complete
+    FSD Creating Dashboard Component complete
 
     AIML Python Fundamentals(part_7).zip => 19 complete
 
