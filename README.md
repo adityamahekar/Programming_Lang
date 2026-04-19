@@ -3,7 +3,7 @@
 
     GFG 250 complete
 
-    FSD setup dashhboard menu complete
+    FSD "WatchList" Component (Part 2) complete
 
     AIML Python Fundamentals(part_7).zip => 19 complete
 
