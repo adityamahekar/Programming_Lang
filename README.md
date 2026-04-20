@@ -14,3 +14,13 @@ react
 bootstrap
 
 npm i react-router-dom
+
+
+
+------ MongoDB --------------
+
+$ npm init
+$ npm i -D nodemon
+$ npm i express body-parser cors dotenv mongoose passport passport-local-mongoose
+
+---------------------------
