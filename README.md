@@ -3,7 +3,7 @@
 
     GFG 278 complete
 
-    FSD Connect MongoDB with Express complete
+    FSD Unit Testing with JEST complete
 
     AIML Python Fundamentals(part_7).zip => 19 complete
 
