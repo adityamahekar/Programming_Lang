@@ -3,7 +3,7 @@
 
     GFG 319 complete
 
-    FSD Creating DB Model complete
+    FSD Creating DB Models complete
 
     AIML Python Fundamentals(part_7).zip => 19 complete
 
