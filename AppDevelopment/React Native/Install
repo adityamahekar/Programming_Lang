@@ -1,0 +1,49 @@
+react native cli setup
+
+https://reactnative.dev/docs/environment-setup
+
+----------------------------------------------------------------
+
+ click on, Chocolatey
+
+powershell run as admin
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+check install >>> choco
+----------------------------------------------------------------
+
+cmd run as admin
+```
+choco install -y nodejs-lts microsoft-openjdk17
+```
+check install >>> node -v
+check install >>> java -version
+--------------------------------------------------------------------
+
+Android Studio download
+
+mode action -> sdk manager
+
+
+
+SDK Platform:
+show packages;
+Android 15.0 Vanillaice <latest>
+- Android SDK Platform 35
+- Intel x86_64 Atom System image              OR            Google API intel x86_64 Atom System image
+
+				
+Android 14.0
+- Android SDK Platform 34
+- Source for Android 34
+- Intel x86_64 Atom System image              OR            Google API intel x86_64 Atom System image
+
+
+SDK Tools:
+show packages;
+Android SDK Build-Tools 36-rc3
+- 35.0.0
+- 34.0.0
+
+Android SDK Command -line Tools
