@@ -1,0 +1,27 @@
+Android studio- download
+
+terminal>>
+
+```
+npx react-native init newapp
+
+cd C:\Users\aditya\Desktop\reactApp
+npx @react-native-community/cli@latest init newapp
+
+
+cd newapp
+
+C:\Users\aditya\Desktop\reactApp\newapp> npx react-native run-android
+
+```
+
+Android Studio
+```
+npx react-native run-android
+```
+
+----------------------------------------------------------------------
+Android to vscode
+
+code C:\Users\aditya\Desktop\reactApp\newapp
+----------------------------------------------------------------------
