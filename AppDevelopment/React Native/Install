@@ -49,3 +49,11 @@ Android SDK Build-Tools 36-rc3
 Android SDK Command -line Tools
 
 npx react-native init YtReactNative
+
+--------------------------------------------------------------
+
+C:\Users\aditya\Documents\React Native\YtReactNative>
+
+cmd -> vscode
+>>> code .
+--------------------------------------------------------------
