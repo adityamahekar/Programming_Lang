@@ -1,1 +1,40 @@
 
+------- dockerfile -------
+
+
+FROM node:20-alpine
+
+WORKDIR /app                           // folder app create
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 5173                             // port
+
+CMD ["npm", "run", "dev", "--", "--host"]
+
+# docker push akashingole19/akash-workspace:tagname
+
+=====================================================================
+
+>> docker ps
+>> docker images
+>> docker build -t react--todo--app .
+>> docker run --name react--todo--application -p 5173:5173 react--todo--app
+
+=====================================================================
+
+>> docker tag react-todo-app akashingole19/akash-workspace:react--todo--applatest
+>> docker login
+>> docker push akashingole19/akash-workspace:react--todo--applatest
+
+=====================================================================
+
+>> cd Desktop
+>> mkdir dockertestyt
+>> cd dockertestyt
+>> docker pull akashingole19/akash-workspace:react--todo--applatest
+>> docker run --name reactappPullImage -p 5173:5173 akashingole19/akash-workspace:react--todo--applatest
