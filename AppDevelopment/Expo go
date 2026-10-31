@@ -1,0 +1,17 @@
+
+unzip expo-starter.zip -d my-app
+cd my-app
+npm install
+npx expo start
+
+------------------- App.jsx ----------------------
+
+import { Text, View } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Hello</Text>
+    </View>
+  );
+}
