@@ -1,0 +1,271 @@
+
+////////////////////// Components //////////////////////
+
+function ProductCard(){
+  return (
+    <div className="card">
+      <img src="jeans.jpg"/>
+      <h3> Vitage Jeans </h3>
+      <p> $89.99 </p>
+    </div>
+  )
+}
+
+----------------------------------------------------
+
+<span className="badge"> New </span>
+
+////////////////////// JSX //////////////////////
+
+<p> Total: ${price *2} </p>
+<h3> Hi, {user.name}! </h3>
+
+
+////////////////////// Fragments //////////////////////
+Fragment - <> </>
+
+ return (
+     <> 
+      <h3> Vitage Jeans </h3>
+      <p> $89.99 </p>
+    </>
+  )
+////////////////////// Props //////////////////////
+
+---------- Sender ---------------------------
+<ProductCard name="Vintage Jeans" price={89.99} />
+
+---------- Receiver ---------------------------
+function ProductCard({name, price}){
+  return <h3>{name}</h3>
+}
+
+////////////////////// Children //////////////////////
+
+<Card>
+  <h3> Vintage Jeans</h3>
+  <p> $87.39 </p>
+</Card>
+
+function Card({ children}){
+  return (
+    <div className="card">
+     {children}
+    </div>
+    )
+  }
+
+=================================================================
+
+<Product name="Vintage Jeans" price={84.44}/>
+
+function ProdctCard({name, price}){
+    return <h3> {name} </h3>
+}
+
+////////////////////// Conditional Rendering //////////////////////
+
+{inStock 
+   ? <button> Add to bag </button>
+   : <p> Sold out </p>
+ }
+
+////////////////////// List And Keys //////////////////////
+
+products.map(product =>
+             <ProductCard key={product.id} product={product} />
+)
+
+////////////////////// State //////////////////////
+
+function ProductCard(){
+  const [isFavorite, setIsFavorite] = useState(false)
+
+  function handleClick(){
+    setIsFavorite(true)
+  }
+
+  return <HeartButton active={isFavorite} onClick={handleClick} />
+  
+  }
+////////////////////// Rendering //////////////////////
+
+Virtual DOM - in-memory description
+
+Reconciliation - figures out what changed
+
+Commit - changes reach the DOM
+
+////////////////////// Purity //////////////////////
+
+functtion ProductCard({ name }){
+  return (
+    <div className="card">
+      <h3> {name} </h3>
+      <p> Stock: {Math.random()} </p>
+      <p> Updated: {Date.now()} </p>
+    </div>
+  )
+}
+
+////////////////////// Forms [search bar] //////////////////////
+
+<input onChange={e => setQuery(e.target.value)} />
+
+products.filter(p =>
+    p.name.toLowerCase().includes(query.toLowerCase())
+)
+
+////////////////////// Hooks //////////////////////
+
+const [count, setCount] = useState(0)
+const increase = () => setCount(count + 1)
+``````````````````````````````````````````````````
+    |
+    V
+```````````````````````````````````````````````````
+const [count, setCount] = useState(0)
+  function increase(){
+    setCount(count + 1)
+  }
+`````````````````````````````````````````````````````
+    |
+    V
+``````````````````````````````````````````````````````
+
+function useCounter(){
+  const [count, setCount] = useState(0)
+  function increase(){
+    setCount(count + 1)
+  }
+  return { count, increase }
+}
+
+
+function ProductCard(){
+  const {count, increase } = useCounter()
+  return <button onClick={increase}> {count} </button>
+}
+
+////////////////////// use Effects //////////////////////
+
+useEffect(() =>{
+  const id = setInterval(tick, 1000)
+}, [])
+
+useEffect(() =>{
+  fetchUser(userId)
+}, [userId])
+
+useEffect(() =>{
+  const id = setInterval(tick, 1000)
+  return () => clearInterval(id)
+}, [])
+
+
+////////////////////// Refs //////////////////////
+
+const inputRef = useRef(null)
+<input ref={inputRef} />
+
+<button onClick={() => inputRef.current.focus()} />
+
+
+////////////////////// Context //////////////////////
+
+const UserContext = createContext(null)
+
+function App(){
+  return (
+    <UserContext.Provider value ={user}>
+      <Layout/>
+    </UserContext.Provider>
+    )
+  }
+
+function UserAvataar(){
+  const user = useContext(UserContext)
+}
+
+////////////////////// Reducers //////////////////////
+
+function cartReducer(state, action){
+  switch(action.type){
+    case 'product_added':
+      return [...state, action.product]
+    case 'product_removed':
+      return state.filter(p => p.id !== action.id)
+  }
+}
+
+
+const [cart, dispatch] = useReducer(cartReducer, [])
+dispatch({type: 'product_added', product})
+<CartContext.Provider value={{cart, dispatch}}>
+
+////////////////////// Hydration //////////////////////
+
+createPortal(
+  <Popup product={product} />
+  document.body
+)
+
+
+////////////////////// Portals //////////////////////
+
+////////////////////// Suspense [loading] //////////////////////
+
+<Suspense fallback={<Loading />}>
+  <ProductList />
+</Suspense>
+
+const ProductList = lazy(() => import('./ProductList'))
+const products = use(productsPromise)
+
+=========================================================
+
+function ProductList({ productsPromise }){
+  const theme = use(ThemeContext)
+  const products = use(productsPromise)
+  return <Grid items={products} />
+}
+
+const products = use(productsPromise)
+
+
+function ProductCard({ showReviews}) {
+  if(showReviews){
+    const reviews = use(reviewsPromise)
+  }
+}
+
+////////////////////// Memoization //////////////////////
+
+function Newsletter(){
+  async function subscribe(formData){
+    const email = formData.get('email')
+  }
+
+  return (
+    <form action={subscribe}>
+      <input name="email"/>
+    <button> Subscribe</button>
+    </form>
+  )
+  }
+
+////////////////////// Server Components //////////////////////
+
+async function ProductList(){
+  const products = await db.getProducts()
+  return <Grid items={products} />
+}
+
+'use client'
+
+function FavoriteButton(){
+  const [fav, setFav] = useState(false)
+  return <HeartButton active={fav} onClick={() => setFav(!fav)} />
+}
+
+  
