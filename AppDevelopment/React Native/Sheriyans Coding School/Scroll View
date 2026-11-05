@@ -1,0 +1,44 @@
+import { Text, View, Image, Button, useColorScheme, TouchableOpacity, TouchableHighlight, Alert, Pressable, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+
+/////////// Scroll View ///////////
+
+// import { ScrollView } from 'react-native';
+
+// // const App = () => {
+//   // const theme = useColorScheme();
+//   // const isDarkMode = theme === 'dark';
+// const App = () => {
+//   return (
+//     <SafeAreaView style={styles.container} >
+//       <ScrollView
+//         horizontal
+//         showsHorizontalScrollIndicator
+//         style={styles.scroll}
+//         contentContainerStyle={styles.content}
+//       >
+//         <View style={styles.box1} />
+//         <View style={styles.box2} />
+//         <View style={styles.box3} />  <View style={styles.box1} />
+//         <View style={styles.box2} />
+//         <View style={styles.box3} />  <View style={styles.box1} />
+//         <View style={styles.box2} />
+//         <View style={styles.box3} />
+//         <View style={[styles.box3, { backgroundColor: 'yellow' }]} />
+//       </ScrollView>
+//     </SafeAreaView>
+//   );
+// };
+
+// export default App;
+
+// const styles = StyleSheet.create({
+//   container: {  flex: 1, backgroundColor: 'lightgreen' },
+//   // scroll: { flex: 1 },
+//   content: { gap: 10, paddingHorizontal: 16,  flexWrap: 'wrap', flexDirection: 'row' },
+//   box1: { width: 80, height: 80, backgroundColor: 'red', borderRadius: 40 },
+//   box2: { width: 80, height: 80, backgroundColor: 'green', borderRadius: 40 },
+//   box3: { width: 80, height: 80, backgroundColor: 'blue', borderRadius: 40 },
+// })
+
