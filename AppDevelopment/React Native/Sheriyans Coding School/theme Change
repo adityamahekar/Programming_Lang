@@ -1,0 +1,36 @@
+import { Text, View, Image, Button, useColorScheme, TouchableOpacity, TouchableHighlight, Alert, Pressable, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+
+// const App = () => {
+//   const theme = useColorScheme();
+//   const isDarkMode = theme === 'dark';
+
+//   return (
+//     <SafeAreaView>
+//       <View style={isDarkMode ? styles.containerDark : styles.containerLight}>
+//         <View style={{ width: "70%" , height: 200, backgroundColor: 'red' }}>
+//           <Text style={styles.text}>App</Text>
+//         </View>
+//       </View>
+//     </SafeAreaView>
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({
+//   text: {
+//     color: 'orange',
+//     fontSize: 20,
+//     fontWeight: 'bold',
+//     textAlign: 'center',
+//     marginTop: 20
+//   },
+//   containerLight: {
+//     backgroundColor: 'lightgray',
+//   },
+//   containerDark: {
+//     backgroundColor: 'darkgray',
+//   }
+// })
