@@ -1,0 +1,87 @@
+import { Text, View, Image, Button, useColorScheme, TouchableOpacity, TouchableHighlight, Alert, Pressable, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+///////////// KeyBoard Avoiding View ///////////
+
+// import React, { useState } from 'react';
+// import {
+
+//   KeyboardAvoidingView,
+//   TextInput,
+
+//   Platform,
+//   TouchableWithoutFeedback,
+ 
+//   Keyboard,
+// } from 'react-native';
+
+// export default function App() {
+//   const [username, setUsername] = useState('');
+//   const [submitted, setSubmitted] = useState('');
+
+//   const handleSubmit = () => {
+//     setSubmitted(username.trim());
+//     Keyboard.dismiss();
+//   };
+
+//   return (
+//     <KeyboardAvoidingView
+//       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+//       style={styles.container}>
+//       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+//         <View style={styles.inner}>
+//           <Text style={styles.header}>Header</Text>
+
+//           <TextInput
+//             placeholder="Username"
+//             style={styles.textInput}
+//             value={username}
+//             onChangeText={setUsername}
+//             autoCapitalize="none"
+//             autoCorrect={false}
+//             returnKeyType="done"
+//             onSubmitEditing={handleSubmit}
+//           />
+
+//           <View style={styles.btnContainer}>
+//             <Button title="image" onPress={handleSubmit} />
+//           </View>
+
+//           {submitted ? (
+//             <Text style={styles.result}>Hello, {submitted}</Text>
+//           ) : null}
+//         </View>
+//       </TouchableWithoutFeedback>
+//     </KeyboardAvoidingView>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: 'lightgreen',
+//   },
+//   inner: {
+//     padding: 24,
+//     flex: 1,
+//     justifyContent: 'space-around',
+//   },
+//   header: {
+//     fontSize: 36,
+//     marginBottom: 48,
+//   },
+//   textInput: {
+//     height: 40,
+//     borderColor: '#000000',
+//     borderBottomWidth: 1,
+//     marginBottom: 36,
+//   },
+//   btnContainer: {
+//     backgroundColor: 'white',
+//     marginTop: 12,
+//   },
+//   result: {
+//     fontSize: 18,
+//     marginTop: 24,
+//   },
+// });
