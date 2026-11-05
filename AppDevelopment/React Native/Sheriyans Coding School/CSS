@@ -1,0 +1,65 @@
+import { Text, View, Image, Button, useColorScheme, TouchableOpacity, TouchableHighlight, Alert, Pressable, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+
+
+////////////////  CSS   ////////////////////////
+
+// const App = () => {
+//   // const theme = useColorScheme();
+//   // const isDarkMode = theme === 'dark';
+
+//   return (
+
+//     <SafeAreaView style={styles.container}>
+//       <View style={styles.box1} />
+//       <View style={styles.box2} />
+//       <View style={styles.box3} />
+//       {/* <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold', textAlign: 'center', marginTop: 20 }}>Hello World</Text> */}
+//     </SafeAreaView>
+
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({
+//   container: {
+//     backgroundColor: 'black',
+//     flex: 1,
+//      flexDirection: "row",
+//     // flexDirection: "row-reverse",
+//     //  flexDirection: "column",
+//     // flexDirection: "column-reverse",
+
+//     // justifyContent: "center",
+//     // justifyContent: "flex-end",
+//       // justifyContent: "space-between",
+//       // justifyContent: "space-around",
+//     justifyContent: "space-evenly",
+//     // alignItems: "center",
+//     // alignItems: "flex-start",
+//     // alignItems: "flex-end",
+//     // alignItems: "stretch",
+
+
+//   },
+//   box1: {
+
+//     width: 80,
+//     height: 80,
+//     backgroundColor: 'red',
+//     alignSelf:"flex-end",
+//   },
+//   box2: {
+//     width: 80,
+//     height: 80,
+//     backgroundColor: 'green',
+//   },
+//   box3: {
+//     width: 80,
+//     height: 80,
+//     backgroundColor: 'blue',
+//   }
+
+// })
