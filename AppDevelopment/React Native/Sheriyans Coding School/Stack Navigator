@@ -13,66 +13,78 @@ const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Home" screenOptions={{headerStyle:{backgroundColor:"yellow"},headerTintColor:"orange",headerTitleStyle:{fontWeight:"bold"}}}>
+      {/* // initialRouteName - inital route home screen,  screenOptions - apply to all screens  */}
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="Search" component={Search} />
+      {/* //hide header for Profile screen   headerShown */}
+      <Stack.Screen name="Profile" component={Profile} options={{headerShown:false}}/> 
+       {/* //change header for Search screen   title, HeaderStyle - header color blue , headerBlurEffect */}
+      <Stack.Screen name="Search" component={Search} options={{title: "Super Search" ,headerBlurEffect: 'extraLight', headerStyle:{backgroundColor:"skyblue"}}}/>
     </Stack.Navigator>
   );
 }
 
 const App = () => {
   return (
-    // <SafeAreaView style={styles.container}>
+    
      <NavigationContainer>
         <StackNavigator />
       </NavigationContainer>
-    // </SafeAreaView>
+    
   );
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, backgroundColor: '#fff' },
+  container: { flex: 1, padding: 20, backgroundColor: '#e89494' },
   title: { fontSize: 24, fontWeight: 'bold', marginBottom: 12 },
-  input: { borderWidth: 1, borderColor: '#ccc', borderRadius: 8, padding: 10, marginTop: 16 },
+  input: { borderWidth: 1, borderColor: 'rgb(249, 169, 169)', borderRadius: 8, padding: 10, marginTop: 16 },
 });
 
 export default App;
 
+
 ///////////////////// Home.jsx ////////////////
 
 import { Text, View, StyleSheet, Button } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const Home = ({ navigation }) => {
   return (
+    <SafeAreaView >
     <View style={styles.card}>
       <Text style={styles.text}>Home screen</Text>
-      <Button title="Go to Profile" onPress={() => navigation.navigate('Profile')} />
+      <Button title="Go to Profile" onPress={() => navigation.navigate('Profile',{id:1,name:"lolu"})} />
     </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  card: { padding: 16, marginTop: 12, borderRadius: 8, backgroundColor: '#f2f2f2', width: '100%', alignItems: 'center', justifyContent: 'center' },
+  card: { height: '100%', backgroundColor: '#f5b2b2', width: '100%', alignItems: 'center', justifyContent: 'center' },
   text: { fontSize: 16 },
 });
-
 
 /////////////////// Profile.jsx ////////////////////////////
 
 import { Text, View, StyleSheet, Button } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-export const Profile = ({ navigation }) => {
+export const Profile = ({ navigation, route }) => {
+  const { id, name } = route.params;   //to call obj 
+
   return (
+    <SafeAreaView >
     <View style={styles.card}>
       <Text style={styles.text}>Profile</Text>
-      <Button title="Go to Search" onPress={() => navigation.navigate('Search')} />
-    </View>
+      <Text style={styles.text}>ID: {id}</Text>
+      <Text style={styles.text}>Name: {name}</Text>
+      <Button title="Go to Search" onPress={() => navigation.navigate('Search', { id: 2, name: "Alice" })} />
+    </View></SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  card: { padding: 16, marginTop: 12, borderRadius: 8, backgroundColor: '#f2f2f2' },
+  card: { padding: 16, marginTop: 12, borderRadius: 8, backgroundColor: '#f3a3a3' },
   text: { fontSize: 16 },
 });
 
@@ -80,17 +92,24 @@ const styles = StyleSheet.create({
 
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-export const Search = ({ navigation }) => {
+export const Search = ({ navigation, route }) => {
+  const { id, name } = route.params;  // call obj from Profile.jsx
+
   return (
+    <SafeAreaView >
     <View style={styles.card}>
       <Text style={styles.text}>Search</Text>
-    </View>
+      <Text style={styles.text}>ID: {id}</Text>
+      <Text style={styles.text}>Name: {name}</Text>
+    </View></SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
-  card: { padding: 16, marginTop: 12, borderRadius: 8, backgroundColor: '#f2f2f2' },
+
+  card: { padding: 16, marginTop: 12, borderRadius: 8, backgroundColor: '#d88181' },
   text: { fontSize: 16 },
 });
 
