@@ -1,0 +1,110 @@
+///////////////////////  App.jsx //////////////////////////////
+
+import { Text, StyleSheet, TextInput } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Home } from './src/screens/Home';
+import { Profile } from './src/screens/Profile';
+import {Search} from './src/screens/Search';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+
+
+const Tab = createBottomTabNavigator();
+
+const MyTabs = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={Home} options={{}}/>
+      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen name="Search" component={Search} />
+    </Tab.Navigator>
+  );
+}
+
+const App = () => {
+  return (
+    
+     <NavigationContainer>
+        <MyTabs />
+      </NavigationContainer>
+    
+  );
+};
+
+const styles = StyleSheet.create({
+  container: { flex: 1, padding: 20, backgroundColor: '#e89494' },
+  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 12 },
+  input: { borderWidth: 1, borderColor: 'rgb(249, 169, 169)', borderRadius: 8, padding: 10, marginTop: 16 },
+});
+
+export default App;
+
+////////////////////// Home.jsx //////////////////////////////////
+
+import { Text, View, StyleSheet, Button } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+export const Home = ({ navigation }) => {
+  return (
+    <SafeAreaView >
+    <View style={styles.card}>
+      <Text style={styles.text}>Home screen</Text>
+      <Button title="Go to Profile" onPress={() => navigation.navigate('Profile',{id:1,name:"lolu"})} />
+    </View>
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  card: { height: '100%', backgroundColor: '#f5b2b2', width: '100%', alignItems: 'center', justifyContent: 'center' },
+  text: { fontSize: 16 },
+});
+
+////////////////////// Profile.jsx //////////////////////////////////
+
+import { Text, View, StyleSheet, Button } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+export const Profile = ({ navigation, route }) => {
+  const { id, name } = route.params;   //to call obj 
+
+  return (
+    <SafeAreaView >
+    <View style={styles.card}>
+      <Text style={styles.text}>Profile</Text>
+      <Text style={styles.text}>ID: {id}</Text>
+      <Text style={styles.text}>Name: {name}</Text>
+      <Button title="Go to Search" onPress={() => navigation.navigate('Search', { id: 2, name: "Alice" })} />
+    </View></SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  card: { padding: 16, marginTop: 12, borderRadius: 8, backgroundColor: '#f3a3a3' },
+  text: { fontSize: 16 },
+});
+
+////////////////////// Search.jsx //////////////////////////////////
+
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+export const Search = ({ navigation, route }) => {
+  const { id, name } = route.params;  // call obj from Profile.jsx
+
+  return (
+    <SafeAreaView >
+    <View style={styles.card}>
+      <Text style={styles.text}>Search</Text>
+      <Text style={styles.text}>ID: {id}</Text>
+      <Text style={styles.text}>Name: {name}</Text>
+    </View></SafeAreaView>
+  )
+}
+
+const styles = StyleSheet.create({
+
+  card: { padding: 16, marginTop: 12, borderRadius: 8, backgroundColor: '#d88181' },
+  text: { fontSize: 16 },
+});
