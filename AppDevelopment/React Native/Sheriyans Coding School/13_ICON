@@ -2,6 +2,12 @@
 npx expo install @expo/vector-icons
 ---                  ---
 
+-- android/app/build.gradle --> at end <--
+
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+
+--                             -- 
+
 import IconAntDesign from 'react-native-vector-icons/AntDesign';
 import IconFeather from 'react-native-vector-icons/Feather';
 
